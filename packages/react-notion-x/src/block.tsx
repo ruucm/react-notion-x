@@ -231,9 +231,9 @@ export const Block: React.FC<BlockProps> = (props) => {
 
                     {pageHeader}
 
-                    <h1 className='notion-title'>
+                    <components.h1>
                       <Text value={properties?.title} block={block} />
-                    </h1>
+                    </components.h1>
 
                     {block.type === 'page' &&
                       block.parent_table === 'collection' && (
@@ -529,7 +529,8 @@ export const Block: React.FC<BlockProps> = (props) => {
     case 'excalidraw':
     // fallthrough
     case 'image':
-    // fallthrough
+      // fallthrough
+      return <components.image blockId={blockId} block={block} />
     case 'gist':
     // fallthrough
     case 'embed':

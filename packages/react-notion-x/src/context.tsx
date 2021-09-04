@@ -76,6 +76,9 @@ const dummyComponent = (name: string) => () => {
 }
 
 const defaultComponents: NotionComponents = {
+  h1: dummyComponent('h1'),
+  image: dummyComponent('image'),
+
   link: DefaultLink,
   pageLink: DefaultPageLink,
 

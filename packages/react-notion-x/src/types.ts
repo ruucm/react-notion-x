@@ -7,6 +7,10 @@ export type SearchNotion = (
 ) => Promise<types.SearchResults>
 
 export interface NotionComponents {
+  // added for customizable components
+  h1: any
+  image: any
+
   // TODO: better typing for arbitrary react components
   link: any
   pageLink: any
